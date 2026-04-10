@@ -1,0 +1,127 @@
+/* RegisterPage.css */
+
+.register-page-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+    /* Mint Green */
+}
+
+.register-content-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    width: auto;
+    height: auto;
+}
+
+.register-card-panel {
+    background: #FFFFFF;
+    width: 420px;
+    min-height: 400px;
+    /* Reduced min-height */
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 2rem;
+    /* Reduced padding */
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+
+/* -- ASSETS ALIGNMENT -- */
+
+/* 1. Character */
+.decor-character {
+    position: absolute;
+    right: 100%;
+    margin-right: -40px;
+    margin-bottom: 67px;
+    bottom: -40px;
+    height: 550px;
+    z-index: 20;
+    /* Character stays ON TOP of card/everything */
+    pointer-events: none;
+}
+
+/* 2. Top Left Plant */
+.decor-top-left {
+    position: absolute;
+    /* "positioned to the right side leaf but to the top left corner" */
+    /* Interpretation: Behind the card (like the right leaf) at the top left corner */
+
+    right: 50%;
+    top: auto;
+
+    width: 180px;
+    margin-right: -50px;
+    z-index: 10;
+    /* BEHIND the card (Card is z-10) */
+    pointer-events: none;
+}
+
+/* 3. Right Side Leaf */
+.decor-right-side {
+    position: absolute;
+    left: 100%;
+    top: 40%;
+    width: 100px;
+    /* Slightly larger if needed */
+    /* "slightly move the right side leaf to the right" */
+    /* Previous was -50px margin. Now "to the right" means less negative margin (closer to 100%) or positive margin */
+    /* Let's try -20px margin-left (moved right by 30px) */
+    margin-left: -670px;
+    /* Moved slightly out from behind the card */
+    /* "send it to the back of the centre panel" */
+    z-index: 5;
+    /* Keep it behind, or move z-index up if it needs to be on top. User said "can't see", usually means it's hidden or off screen. */
+    /* If it's behind a white background, it might be hidden. */
+    /* Let's Try z-index 15 to bring it to front if it's supposed to overlap, or check margin. */
+    /* The user said "leaf side leaf", assuming "Right side leaf.svg". */
+    /* Previous was margin-left: -440px which puts it WAY to the left (behind the card completely). */
+    /* Positive margin-left or small negative puts it to the right of the card. */
+    pointer-events: none;
+}
+
+/* 4. Bottom Right Plant */
+.decor-bottom-right {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 120px;
+    z-index: 15;
+    /* Corners usually on top? Or match others? Let's keep on top for depth unless asked */
+    pointer-events: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1100px) {
+    .decor-character {
+        right: auto;
+        left: -150px;
+        height: 400px;
+        bottom: -20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .register-card-panel {
+        width: 90%;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .decor-character,
+    .decor-top-left,
+    .decor-right-side {
+        display: none;
+    }
+}

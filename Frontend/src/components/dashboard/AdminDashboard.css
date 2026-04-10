@@ -1,0 +1,262 @@
+/* AdminDashboard.css */
+
+.admin-header-card {
+    background: linear-gradient(90deg, #e0e0e0 0%, #f5f5f5 100%);
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.admin-header-card h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.admin-header-card p {
+    color: #666;
+    margin: 0;
+}
+
+.admin-shield-icon {
+    color: #2196F3;
+    /* Blue shield */
+}
+
+/* Stats Section */
+.admin-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.admin-stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.stat-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.stat-users {
+    background: #E3F2FD;
+    color: #1565C0;
+}
+
+.stat-ngos {
+    background: #E8F5E9;
+    color: #2E7D32;
+}
+
+.stat-logs {
+    background: #FFEBEE;
+    color: #C62828;
+}
+
+.stat-details h3 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #333;
+}
+
+.stat-details p {
+    margin: 0;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Split Layout */
+.admin-split-layout {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.admin-section {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+}
+
+.section-header {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Table overrides */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th {
+    text-align: left;
+    padding: 1rem;
+    color: #888;
+    font-weight: 500;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.admin-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #f9f9f9;
+    vertical-align: middle;
+}
+
+.user-cell strong {
+    display: block;
+    color: #333;
+}
+
+.user-cell span {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.role-badge {
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status-active {
+    background: #E8F5E9;
+    color: #2E7D32;
+}
+
+.status-blocked {
+    background: #FFEBEE;
+    color: #C62828;
+}
+
+.action-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.btn-block {
+    color: #D32F2F;
+}
+
+.btn-unblock {
+    color: #388E3C;
+}
+
+/* Logs Section */
+.logs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.log-item {
+    padding: 1rem;
+    border-radius: 8px;
+    background: #f9fafb;
+    border-left: 4px solid #ddd;
+}
+
+.log-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.log-title {
+    font-weight: 600;
+    color: #333;
+}
+
+.log-time {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.log-details {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Event Management */
+.event-management-section {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.events-table-admin td {
+    padding: 1.2rem 1rem;
+}
+
+.event-desc-cell {
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.delete-btn {
+    color: #D32F2F;
+    background: #FFEBEE;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.delete-btn:hover {
+    background: #FFCDD2;
+}
+
+@media (max-width: 1000px) {
+
+    .admin-split-layout,
+    .admin-stats-grid {
+        grid-template-columns: 1fr;
+    }
+}

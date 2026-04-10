@@ -1,0 +1,77 @@
+.network-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.user-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.user-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #eee;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.user-name {
+    margin: 0 0 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.user-role {
+    margin: 0 0 15px;
+    color: #666;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+
+.connect-btn {
+    background: #2196f3;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.connect-btn:hover {
+    background: #1976d2;
+}
+
+.connect-btn:disabled {
+    background: #e0e0e0;
+    color: #999;
+    cursor: default;
+}
+
+.connected-badge {
+    color: #4caf50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-weight: 500;
+}
